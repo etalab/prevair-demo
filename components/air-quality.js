@@ -24,7 +24,7 @@ const AirQuality = ({...props}) => {
             <tr>
               <th />
               <th>Moyenne</th>
-              <th>Maxium</th>
+              <th>Maximum</th>
               {idx > 0 && <th>Évolution</th>}
             </tr>
             <tbody>
