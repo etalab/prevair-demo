@@ -17,7 +17,7 @@ const AirQuality = ({...props}) => {
   return (
     <div className='tables'>
 
-      {['Aujoud’hui', 'Demain', 'Après demain'].map((day, idx) => (
+      {['Aujourd’hui', 'Demain', 'Après demain'].map((day, idx) => (
         <div key={day}>
           <h2>{day}</h2>
           <table>
