@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "next start",
     "export": "next export",
     "lint": "xo",
     "deploy": "touch out/.nojekyll && gh-pages -d out -m 'Deploy [skip ci]' --dotfiles=true",
