@@ -8,7 +8,7 @@ export default () => (
 
       <Link href='/'>
         <a className='nav__link'>
-          <h3>prevair-experiment</h3>
+          <h3>Prévisions Qualité de l’air</h3>
         </a>
       </Link>
 
