@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import MainStyle from '../components/main-style'
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 class Layout extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class Layout extends React.Component {
         <main>
           {children}
         </main>
+        <Footer />
 
         <style jsx>{`
           div {

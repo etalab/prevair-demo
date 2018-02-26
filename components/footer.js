@@ -4,9 +4,9 @@ import theme from '../styles/theme'
 
 const Footer = ({date}) => (
   <footer className='footer'>
-    <div className='container'>
+    {date && <div className='container'>
       Données fournies par l’INERIS - Date de mise à jour : {date}
-    </div>
+    </div>}
     <style jsx>{`
       .footer {
         background: ${theme.colors.almostBlack};
@@ -27,7 +27,11 @@ const Footer = ({date}) => (
 )
 
 Footer.propTypes = {
-  date: PropTypes.string.isRequired
+  date: PropTypes.string
+}
+
+Footer.defaultProps = {
+  date: null
 }
 
 export default Footer
