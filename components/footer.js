@@ -5,7 +5,7 @@ import theme from '../styles/theme'
 const Footer = ({date}) => (
   <footer className='footer'>
     <div className='container'>
-      Données du {date} fournies par l’Ineris
+      Données fournies par l’INERIS - Date de mise à jour : {date}
     </div>
     <style jsx>{`
       .footer {
