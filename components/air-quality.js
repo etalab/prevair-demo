@@ -21,12 +21,14 @@ const AirQuality = ({...props}) => {
         <div key={day}>
           <h2>{day}</h2>
           <table>
-            <tr>
-              <th />
-              <th>Moyenne</th>
-              <th>Maximum</th>
-              {idx > 0 && <th>Évolution</th>}
-            </tr>
+            <tbody>
+              <tr>
+                <th />
+                <th>Moyenne</th>
+                <th>Maximum</th>
+                {idx > 0 && <th>Évolution</th>}
+              </tr>
+            </tbody>
             <tbody>
               {composants.map(composant => (
                 <tr key={`${day}-${composant}`}>
