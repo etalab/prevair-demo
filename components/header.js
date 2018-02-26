@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import MdCloudQueue from 'react-icons/lib/md/cloud-queue'
 
 import theme from '../styles/theme'
 
@@ -8,7 +9,7 @@ export default () => (
 
       <Link href='/'>
         <a className='nav__link'>
-          <h3>Prévisions Qualité de l’air</h3>
+          <h3><MdCloudQueue size={42} /> Prévisions Qualité de l’air</h3>
         </a>
       </Link>
 
