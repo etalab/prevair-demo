@@ -4,7 +4,6 @@ import debounce from 'debounce'
 import api from '../lib/api'
 
 import Footer from '../components/footer'
-import Section from './section'
 import SearchInput from './search-input'
 import Notification from './notification'
 import renderCommune from './search-input/render-commune'
@@ -92,7 +91,7 @@ class SearchCommune extends React.Component {
     const {input, results, commune, air, loading, error} = this.state
 
     return (
-      <Section>
+      <div>
         <SearchInput
           value={input}
           results={results}
@@ -119,7 +118,7 @@ class SearchCommune extends React.Component {
             margin: 1em 0;
           }
           `}</style>
-      </Section>
+      </div>
     )
   }
 }
