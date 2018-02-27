@@ -1,16 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Meta from '../components//main/meta'
 import MainStyle from '../components/main-style'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from '../components/main/header'
+import Footer from '../components/main/footer'
 
 class Layout extends React.Component {
   render() {
-    const {children} = this.props
+    const {title, description, children} = this.props
 
     return (
       <div>
+        <Meta title={title} description={description} />
         <MainStyle />
         <Header />
         <main>
@@ -38,10 +40,14 @@ class Layout extends React.Component {
 }
 
 Layout.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
   children: PropTypes.node
 }
 
 Layout.defaultProps = {
+  title: null,
+  description: null,
   children: null
 }
 

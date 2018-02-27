@@ -5,12 +5,12 @@ import debounce from 'debounce'
 
 import api from '../../lib/api'
 
-import Footer from '../footer'
 import LoadingContent from '../loading-content'
 import SearchCommune from '../search-commune'
 
 import CommuneHeader from './commune-header'
 import AirQuality from './air-quality'
+import Footer from './footer'
 
 class Commune extends React.Component {
   constructor(props) {

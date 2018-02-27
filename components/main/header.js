@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import MdCloudQueue from 'react-icons/lib/md/cloud-queue'
 
-import theme from '../styles/theme'
+import theme from '../../styles/theme'
 
 export default () => (
   <nav className='nav'>
