@@ -9,7 +9,7 @@ export default () => (
 
       <Link href='/'>
         <a className='nav__link'>
-          <h3><MdCloudQueue size={42} /> qualite-air.data.gouv.fr</h3>
+          <h3><MdCloudQueue size={42} /> Prévisions Qualité de l’air</h3>
         </a>
       </Link>
 
