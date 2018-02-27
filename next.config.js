@@ -18,7 +18,8 @@ module.exports = {
   exportPathMap() {
     return {
       '/': {page: '/'},
-      '/commune': {page: '/commune'}
+      '/commune': {page: '/commune'},
+      '/api': {page: '/api'}
     }
   }
 }

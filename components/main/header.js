@@ -13,7 +13,9 @@ export default () => (
         </a>
       </Link>
 
-      <ul className='nav__links' />
+      <ul className='nav__links'>
+        <li><Link href='/api'><a>API</a></Link></li>
+      </ul>
     </div>
 
     <style jsx>{`
