@@ -5,6 +5,7 @@ import Section from '../section'
 
 const Api = () => (
   <Section>
+    <p>Cette API est une API expérimentale de l'API Géo.</p>
     <div className='entrypoint' id='search'>
       <div className='row'>
         <div className='description'>
@@ -12,8 +13,8 @@ const Api = () => (
           <p>Point d’entrée.</p>
         </div>
         <div className='details'>
-          <p>Utiliser les paramètres <b>lon</b> et <b>lat</b> pour faire une recherche géographique:</p>
-          <pre><code>http 'https://nivo.api.gouv.fr/prevair?lon=1.075679&lat=48.765222'</code></pre>
+          <p>Utilisez les paramètres <b>lon</b> et <b>lat</b> pour faire une recherche géographique:</p>
+          <pre><code>curl 'https://sandbox.geo.api.gouv.fr/prevair?lon=1.075679&lat=48.765222'</code></pre>
           <pre><code>{`
             {
             "date": "2018-02-26",
