@@ -5,7 +5,7 @@ import theme from '../styles/theme'
 const Footer = ({date}) => (
   <footer className='footer'>
     {date && <div className='container'>
-      Données fournies par l’INERIS - Date de mise à jour : {date}
+      <div>Données fournies par l’INERIS - Date de mise à jour : <b>{date}</b></div>
     </div>}
     <style jsx>{`
       .footer {
@@ -19,7 +19,6 @@ const Footer = ({date}) => (
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-bottom: 2em;
         flex-wrap: wrap;
       }
     `}</style>
