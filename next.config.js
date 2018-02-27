@@ -17,7 +17,8 @@ module.exports = {
 
   exportPathMap() {
     return {
-      '/': {page: '/'}
+      '/': {page: '/'},
+      '/commune': {page: '/commune'}
     }
   }
 }

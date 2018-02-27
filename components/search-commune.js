@@ -1,14 +1,14 @@
+import {format} from 'url'
 import React from 'react'
+import PropTypes from 'prop-types'
+import {withRouter} from 'next/router'
 import debounce from 'debounce'
 
 import api from '../lib/api'
 
-import Footer from '../components/footer'
 import SearchInput from './search-input'
 import Notification from './notification'
 import renderCommune from './search-input/render-commune'
-import Commune from './commune'
-import AirQuality from './air-quality'
 
 class SearchCommune extends React.Component {
   constructor(props) {
@@ -16,8 +16,6 @@ class SearchCommune extends React.Component {
     this.state = {
       input: '',
       results: [],
-      commune: null,
-      air: null,
       loading: false,
       error: null
     }
@@ -44,8 +42,11 @@ class SearchCommune extends React.Component {
   }
 
   handleSelect(item) {
-    this.setState({input: item.nom, commune: item}, this.getAirQuality)
-    this.update()
+    this.setState({input: item.nom})
+    const {router} = this.props
+    const query = {...router.query, code: item.code}
+    const url = format({pathname: '/commune', query})
+    router.push(url)
   }
 
   handleInput(input) {
@@ -69,26 +70,8 @@ class SearchCommune extends React.Component {
     this.setState({loading: false})
   }
 
-  async getAirQuality() {
-    const {commune} = this.state
-    const {coordinates} = commune.centre
-    const query = `lon=${coordinates[0]}&lat=${coordinates[1]}`
-
-    try {
-      const results = await api('https://sandbox.geo.api.gouv.fr/prevair?', query)
-      this.setState({
-        air: results
-      })
-    } catch (err) {
-      this.setState({
-        results: [],
-        error: err
-      })
-    }
-  }
-
   render() {
-    const {input, results, commune, air, loading, error} = this.state
+    const {input, results, loading, error} = this.state
 
     return (
       <div>
@@ -105,13 +88,7 @@ class SearchCommune extends React.Component {
           <div className='error'>
             <Notification message={error.message} type='error' />
           </div>
-          }
-
-        {commune && <Commune {...commune} />}
-
-        {air && <AirQuality {...air} />}
-
-        {air && <Footer date={air.date} />}
+        }
 
         <style jsx>{`
           .error {
@@ -123,4 +100,11 @@ class SearchCommune extends React.Component {
   }
 }
 
-export default SearchCommune
+SearchCommune.propTypes = {
+  router: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+    query: PropTypes.object.isRequired
+  }).isRequired
+}
+
+export default (withRouter(SearchCommune))

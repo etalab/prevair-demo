@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import MdCallMade from 'react-icons/lib/md/call-made'
 import MdCallReceived from 'react-icons/lib/md/call-received'
 
-import theme from '../styles/theme'
+import theme from '../../styles/theme'
 
 const composants = ['NO2', 'O3', 'PM10', 'PM25']
 
