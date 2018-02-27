@@ -78,6 +78,10 @@ const AirQuality = ({...props}) => {
 
         td.green {
           background: ${theme.successBg};
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
         }
 
         td.red {
