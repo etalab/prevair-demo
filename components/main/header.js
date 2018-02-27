@@ -14,6 +14,7 @@ export default () => (
       </Link>
 
       <ul className='nav__links'>
+        <li><Link href='/commune'><a>Qualité de l’air</a></Link></li>
         <li><Link href='/api'><a>API</a></Link></li>
       </ul>
     </div>
