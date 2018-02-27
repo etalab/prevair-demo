@@ -3,7 +3,7 @@ import prune from 'underscore.string/prune'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
 
-const SITE_NAME = 'nivo.data.gouv.fr'
+const SITE_NAME = 'qualite-air.data.gouv.fr'
 
 const Meta = ({title, description}) => {
   description = prune(description, 160, '…')
@@ -33,15 +33,13 @@ const Meta = ({title, description}) => {
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:title' content={title} />
         <meta name='twitter:description' content={description} />
-        <meta name='twitter:site' content='@NivoData' />
-        <meta name='twitter:image:src' content='/static/images/logos/logo-nivo.svg' />
+        <meta name='twitter:site' content='@geodatagouv' />
 
         {/* Open Graph general (Facebook, Pinterest & Google+) */}
         <meta name='og:title' content={title} />
         <meta name='og:description' content={description} />
-        <meta name='og:image' content='/static/images/logos/logo-nivo.svg' />
-        <meta name='og:url' content='https://nivo.data.gouv.fr' />
-        <meta name='og:site_name' content='nivo.data.gouv.fr' />
+        <meta name='og:url' content='https://qualite-air.data.gouv.fr' />
+        <meta name='og:site_name' content='qualite-air.data.gouv.fr' />
         <meta name='og:locale' content='fr_FR' />
         <meta name='og:type' content='website' />
       </Head>

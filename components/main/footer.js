@@ -11,20 +11,20 @@ const Footer = () => (
   <footer className='footer'>
     <div className='container'>
       <div className='footer__logo'>
-        <img className='nav__logo' src='/static/images/logos/etalab.svg' alt='Accueil de cadastre.data.gouv.fr' />
+        <img className='nav__logo' src='/static/images/logos/etalab.svg' alt='Accueil de qualite-air.data.gouv.fr' />
         <ul className='footer__social'>
-          <li><Link href='https://twitter.com/AdresseDataGouv'><a><FaTwitter /></a></Link></li>
-          <li><Link href='https://github.com/etalab/nivo.data.gouv.fr'><a><FaGithub /></a></Link></li>
+          <li><Link href='https://twitter.com/geodatagouv'><a><FaTwitter /></a></Link></li>
+          <li><Link href='https://github.com/etalab/prevair-experiment-ui'><a><FaGithub /></a></Link></li>
           <li><Link href='https://blog.geo.data.gouv.fr'><a><FaMedium /></a></Link></li>
-          <li><a href='mailto:contact@nivo.data.gouv.fr'><FaEnvelope /></a></li>
+          <li><a href='mailto:contact@geo.data.gouv.fr'><FaEnvelope /></a></li>
         </ul>
       </div>
       <ul className='footer__links'>
-        <li><h2>nivo.data.gouv.fr</h2></li>
+        <li><h2>qualite-air.data.gouv.fr</h2></li>
         <li><Link href='/about'><a>À propos</a></Link></li>
         <li><Link href='/cgu'><a>Mentions légales et CGU</a></Link></li>
         <li><Link href='/faq'><a>FAQ</a></Link></li>
-        <li><a href='mailto:contact@nivo.data.gouv.fr'>Contact</a></li>
+        <li><a href='mailto:contact@geo.data.gouv.fr'>Contact</a></li>
       </ul>
     </div>
     <style jsx>{`
