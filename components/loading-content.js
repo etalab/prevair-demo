@@ -32,9 +32,14 @@ const LoadingContent = ({loading, error, children}) => {
 }
 
 LoadingContent.propTypes = {
-  loading: PropTypes.bool.isRequired,
-  error: PropTypes.object.isRequired,
+  loading: PropTypes.bool,
+  error: PropTypes.object,
   children: PropTypes.node.isRequired
+}
+
+LoadingContent.defaultProps = {
+  loading: false,
+  error: null
 }
 
 export default LoadingContent
